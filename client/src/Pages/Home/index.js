@@ -20,7 +20,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import ProductItem from "../../Components/ProductItem";
 import HomeCat from "../../Components/HomeCat";
-import Footer from "../../Components/Footer";
+
 
 
 
@@ -37,10 +37,10 @@ const Home= () => {
       
 
       <section className="homeProducts">
-      <div className="container">
-        <div className="row">
-            <div className="col-md-3">
-            <div className="sticky">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-3">
+                    <div className="sticky">
                 <div className="banner">
                     <img src={banner1} className="cursor" alt="banner"/>
                 </div>
@@ -50,29 +50,26 @@ const Home= () => {
                 </div>
                 </div>
         </div>
-        <div className="col-md-9 productRow">
-        <div className="d-flex align-items-center">
-            <div className="info w-75">
+
+
+                <div className="col-md-9 productRow">
+                    <div className="d-flex align-items-center">
+                    <div className="info w-75">
                 <h3 className="mb-0 hd">BEST SELLERS</h3>
                 <p className="text-light text-sml mb-0">Los Productos mas vendidos no te pierdas nuestras promociones</p>
-            </div>
-            <Button className="viewAllBtn ml-auto">
-                ver mas <IoIosArrowRoundForward />
-            </Button>
-
-
-        </div>
+                    </div>
+                    <Button className="viewAllBtn ml-auto">Ver Más <IoIosArrowRoundForward /></Button>
+                    </div>
  
-            <div className="product_row w-100 mt-4">
+            <div className="product_row w-100 mt-5">
             <Swiper
-        slidesPerView={4}
-        spaceBetween={10}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Navigation]}
-        className="mySwiper"
-      >
+                slidesPerView={5}
+                spaceBetween={5}
+                navigation={true}
+                slidesPerGroup={2}
+                modules={[Navigation]}
+                className="mySwiper"
+                >
 
 
                         <SwiperSlide>
@@ -94,47 +91,60 @@ const Home= () => {
                         <SwiperSlide>
                             <ProductItem/>
                         </SwiperSlide>
+           </Swiper>
 
-
-
-                        
-                       
-                      
-                        
-                       
-
-            </Swiper>
+                  
                    
             </div>
 
-
-            <div className="d-flex align-items-center mt-5">
-            <div className="info w-75">
-                <h3 className="mb-0 hd">Nuevos Productos</h3>
-                <p className="text-light text-sml mb-0">Los Productos en stock</p>
-            </div>
-            <Button className="viewAllBtn ml-auto">
-                ver mas <IoIosArrowRoundForward />
-            </Button>
-
-
-        </div>
+            <div className="col-md-9 productRow">
+                    <div className="d-flex align-items-center">
+                    <div className="info w-75">
+                <h3 className="mb-0 hd">BEST SELLERS</h3>
+                <p className="text-light text-sml mb-0">Los Productos mas vendidos no te pierdas nuestras promociones</p>
+                    </div>
+                    <Button className="viewAllBtn ml-auto">Ver Más <IoIosArrowRoundForward /></Button>
+                    </div>
  
-            <div className="product_row productRow2 w-100 mt-4 d-flex">          
-           
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>                      
-            <ProductItem/>
-            <ProductItem/>
-            <ProductItem/>                      
-            <ProductItem/>
-         
+            <div className="product_row w-100 mt-6">
+            <Swiper
+                slidesPerView={5}
+                spaceBetween={0}
+                navigation={false}
+                slidesPerGroup={3}
+                modules={[Navigation]}
+                className="mySwiper"
+                >
+
+
+                        <SwiperSlide>
+                            <ProductItem/>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <ProductItem/>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <ProductItem/>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <ProductItem/>
+                        </SwiperSlide>
+
+                        <SwiperSlide>
+                            <ProductItem/>
+                        </SwiperSlide>
+           </Swiper>
+
+                  
+                   
+            </div>
+            </div>
+
 
             
-                   
-            </div>
 
 
             <div className="d-flex mt-4 mb-5 bannerSec">

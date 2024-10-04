@@ -9,7 +9,11 @@ import CiudadDropdown from "../ciudadDropdown";
 import { Button } from "@mui/material";
 import SearchBox from "./SearchBox";
 import Navigation from "../Navigation";
+import { MyContext } from "../../App";
+import { useContext } from "react";
 const Header = () => {
+
+    const context = useContext(MyContext);
 
     return (  <>
 
@@ -35,12 +39,17 @@ const Header = () => {
                     <SearchBox/>
 
                 <div className=" part3 d-flex align-items-center ml-auto" >
+                {
+                    context.isLogin!==true ? <Link to="/signIn"> <Button className="btn-blue btn-lg btn-big btn-round mr-3">Ingresar</Button> </Link> : 
                     <Button className="circle mr-3">  <FiUser />     </Button>
+                }
+
                     <div className="ml-auto cartTab d-flex align-items-center">
                         <span className="price"> $15.20 </span>
                         <div className="position-relative">
-                           <Button className="circle ml-2">  <IoBagOutline />     </Button> 
+                           <Link to="/cart"><Button className="circle ml-2">  <IoBagOutline />     </Button> 
                            <span className="count d-flex align-items-center justify-content-center">  1  </span>
+                           </Link>
                         </div>
                         
                     </div>
